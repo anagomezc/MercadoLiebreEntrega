@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="/stylesheets/app.css">
+    
+    
+    <title></title>
+</head>
+
+<body>
+    <header class="main-header">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-5 col-md-2">
+					<a href="/" class="main-header_home-link">
+						<img src="/images/logo-mercado-liebre.svg">
+					</a>
+				</div>
+
+				<div class="col-7 col-md-6">
+					<form action="" method="get" class="search-form">
+						<input type="text" name="search" placeholder="Buscar productos, marcas y más" class="search-form_input">
+						<button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+					</form>
+				</div>
+
+				<div class="col-12 col-md-4">
+					<a href="#" class="main-header_credit-link">
+						<i class="fas fa-hand-holding-usd"></i>
+						Comprá en cuotas y sin tarjeta de crédito
+					</a>
+				</div>
+			</div>
+
+			<button class="btn-toggle-navbar">
+				<i class="fas fa-bars"></i>
+			</button>
+
+			<nav class="main-navbar">
+				<ul class="left-navbar">
+					<li><a href="#">Ofertas</a></li>
+					<li><a href="#">Tiendas Oficiales</a></li>
+					<li><a href="#">Vender</a></li>
+					<li><a href="#">Ayuda</a></li>
+				</ul>
+
+				<ul class="right-navbar">
+					<li><a href="#">Creá tu cuenta <i class="far fa-address-card"></i></a></li>
+					<li><a href="#">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+					<li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+    <div class="banner2"></div>
+
+    <h1 class="titulo1">Editando producto <%= productoAEditar.name %> </h1>
+        <form method="POST" action="/products/edit/<%=productoAEditar.id%> ?_method=PUT" class="formulario">
+            
+        <label for="" class="titulo2">Nombre del producto</label>
+        <input type="text" name="name" class="respuesta">
+       
+       
+
+        <label for="" class="titulo2">Precio del producto</label>
+        <input type="number" name="price" class="respuesta">
+
+        <label for="" class="titulo2"> Descuento del producto (porcentaje) </label>
+        <input type="text" name="discount" class="respuesta">
+
+        <label for="" class="titulo2">Descripcion del producto</label>
+        <input type="text" name="description" class="respuesta">
+
+        <label for="" class="titulo2">Imagen</label>
+        <input type="file" name="image" class="respuesta">
+
+        <label for="" class="titulo2">Categoria</label>
+        <input type="text" name="category" class="respuesta">
+
+
+        <input type="submit" value="Editar" class="enter">
+        </form>
+    </body>
+    </html>

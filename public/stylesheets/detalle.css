@@ -1,0 +1,25 @@
+:root {
+    --yellow: #EAC926;
+    --dark-blue: #03264C;
+    --light-blue: #1259c3;
+    --gray: #666666;
+    --light-gray: #ebebeb;
+    --green: #39b54a;
+    --base-font-family: 'Roboto', sans-serif
+  }
+
+.banner {
+    display: none;
+};
+body{
+    background-color: black;
+}
+.etc {
+    width: 100%; 
+    background-color: black
+};
+h2 {width: 100%;}
+
+.preciovie {
+    color: var(--green);
+}
